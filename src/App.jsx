@@ -3,24 +3,34 @@ const dateFormatter = new Intl.DateTimeFormat("en", {
   dateStyle: "long",
 });
 
-function Hello() {
+function Hello(props) {
+  const { name, age } = props;
   const now = new Date();
 
   return (
-    <div>
-      <p>Hello world, it is {dateFormatter.format(now)}</p>
+    <div style={{ marginTop: 16, marginBottom: 16 }}>
+      <p style={{ margin: 0 }}>
+        Hello {name}, you are {age} years old!
+      </p>
+      <p style={{ margin: 0 }}>
+        Currently, it is <time dateTime={now}>{dateFormatter.format(now)}</time>
+      </p>
     </div>
   );
 }
 
 export function App() {
+  const person3 = {
+    name: "Peter",
+    age: 10,
+  };
+
   return (
     <div>
       <h1>Greetings</h1>
-      <Hello />
-      <Hello />
-      <Hello />
-      <Hello />
+      <Hello name="Marek" age={26} />
+      <Hello name="George" age={26 + 10} />
+      <Hello name={person3.name} age={person3.age} />
     </div>
   );
 }
