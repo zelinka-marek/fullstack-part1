@@ -3,18 +3,24 @@ const dateFormatter = new Intl.DateTimeFormat("en", {
   dateStyle: "long",
 });
 
-export function App() {
+function Hello() {
   const now = new Date();
-  const a = 10;
-  const b = 20;
-  console.log(now, a + b);
 
   return (
     <div>
       <p>Hello world, it is {dateFormatter.format(now)}</p>
-      <p>
-        {a} plus {b} is {a + b}
-      </p>
+    </div>
+  );
+}
+
+export function App() {
+  return (
+    <div>
+      <h1>Greetings</h1>
+      <Hello />
+      <Hello />
+      <Hello />
+      <Hello />
     </div>
   );
 }
