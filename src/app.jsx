@@ -1,5 +1,6 @@
 import { Counter } from "./components/counter";
 import { Hello } from "./components/hello";
+import { Steps } from "./components/steps";
 
 export function App() {
   const person3 = { name: "Peter", age: 10 };
@@ -13,6 +14,9 @@ export function App() {
       <hr />
       <h2>Counter</h2>
       <Counter />
+      <hr />
+      <h2>Steps</h2>
+      <Steps />
     </>
   );
 }
