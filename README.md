@@ -1,6 +1,6 @@
 # Fullstack - Part1
 
-These are the [FullStackOpen](https://fullstackopen.com/en/part1/) learning materials. See `/src/app.jsx`.
+These are the [FullStackOpen](https://fullstackopen.com/) learning materials. See `/src/app.jsx`.
 
 ## Getting Started
 
