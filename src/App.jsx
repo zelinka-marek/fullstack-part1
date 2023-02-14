@@ -13,7 +13,8 @@ function Hello(props) {
         Hello {name}, you are {age} years old!
       </p>
       <p style={{ margin: 0 }}>
-        Currently, it is <time dateTime={now}>{dateFormatter.format(now)}</time>
+        Currently, it is{" "}
+        <time dateTime={now.toISOString()}>{dateFormatter.format(now)}</time>
       </p>
     </div>
   );
