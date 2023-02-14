@@ -1,6 +1,20 @@
 import { useState } from "react";
 import { Button } from "./button";
 
+function History(props) {
+  const { clicks } = props;
+
+  if (!clicks.length) {
+    return (
+      <p style={{ color: "blue" }}>
+        <i>the app is used by pressing buttons</i>
+      </p>
+    );
+  }
+
+  return <p>{clicks.join(" ")}</p>;
+}
+
 export function Steps() {
   const [clicks, setClicks] = useState([]);
   const leftClicks = clicks.filter((click) => click === "L").length;
@@ -26,7 +40,7 @@ export function Steps() {
         </Button>
         {rightClicks}
       </div>
-      <p>{clicks.join(" ")}</p>
+      <History clicks={clicks} />
     </div>
   );
 }
