@@ -27,11 +27,11 @@ export function App() {
   };
 
   return (
-    <div>
+    <>
       <h1>Greetings</h1>
       <Hello name="Marek" age={26} />
       <Hello name="George" age={26 + 10} />
       <Hello name={person3.name} age={person3.age} />
-    </div>
+    </>
   );
 }
