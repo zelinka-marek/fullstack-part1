@@ -1,4 +1,4 @@
-# Fullstack - Part1
+# FullStack - Part1
 
 These are the [FullStackOpen](https://fullstackopen.com/) learning materials. See `/src/app.jsx`.
 
