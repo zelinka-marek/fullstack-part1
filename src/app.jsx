@@ -1,12 +1,8 @@
-import { useState } from "react";
 import { Counter } from "./components/counter";
 import { Hello } from "./components/hello";
 
 export function App() {
   const person3 = { name: "Peter", age: 10 };
-  const [count, setCount] = useState(0);
-
-  setTimeout(() => setCount((count) => count + 1), 1000);
 
   return (
     <>
@@ -16,7 +12,7 @@ export function App() {
       <Hello name={person3.name} age={person3.age} />
       <hr />
       <h2>Counter</h2>
-      <Counter count={count} />
+      <Counter />
     </>
   );
 }
